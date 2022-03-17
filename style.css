@@ -1,0 +1,167 @@
+/** {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-family: "Montserrat";
+    font-size: 20px;
+  }
+  section {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    background-color: rgb(37, 37, 37);
+    flex-direction: column;
+    padding: 50px 0;
+  }
+  section h1 {
+    color: rgba(255, 255, 255, 0.322);
+    text-align: center;
+    width: 100%;
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  section p {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.322);
+    width: 100%;
+    margin-bottom: 40px;
+  }
+  .container {
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+    justify-content: center;
+  }
+  .texts p {
+    color: black;
+    text-align: left;
+    width: 100%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  .texts p.replay {
+    text-align: right;
+  */
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #333;
+    min-height: 90vh;
+}
+
+label{
+    position: relative;
+    top: -110px;
+    width: 100px;
+    height: 45px;
+    background: #ffea72;
+    border-radius: 10px;
+}
+
+/*label input{
+    appearance: none;
+}*/
+
+label .one, .two, .three, .four, .five{
+  appearance: none;
+}
+
+label span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 65px;
+    height: 45px;
+    background: #333;
+    border: 6px solid #10f7d0;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label .one:checked ~ span{
+    left: 55px;
+}
+label .two:checked ~ span{
+  left: 55px;
+}
+label .three:checked ~ span{
+  left: 55px;
+}
+label .four:checked ~ span{
+  left: 55px;
+}
+label .five:checked ~ span{
+  left: 55px;
+}
+
+label span ion-icon{
+    color: rgba(255, 255, 255, 0.25);
+    font-size: 2em;
+    transition: 0.5s;
+}
+
+label .one:checked ~ span ion-icon{
+    color: rgba(255, 255, 255, 1);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+label .two:checked ~ span ion-icon{
+  color: rgba(255, 255, 255, 1);
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+label .three:checked ~ span ion-icon{
+  color: rgba(255, 255, 255, 1);
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+label .four:checked ~ span ion-icon{
+  color: rgba(255, 255, 255, 1);
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+label .five:checked ~ span ion-icon{
+  color: rgba(255, 255, 255, 1);
+  filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 10px #fff) drop-shadow(0 0 15px #fff);
+}
+
+
+.bulb, .bulb1, .bulb2, .bulb3, .bulb4{
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 248px;
+  height: 308px;
+  pointer-events: none;
+  background: url(bulb_off.jpg);
+  transition: 0.5s;
+}
+
+label .one:checked ~ .bulb{
+  background: url(bulb_on.jpg);
+}
+label .two:checked ~ .bulb1{
+  background: url(bulb_on.jpg);
+}
+label .three:checked ~ .bulb2{
+  background: url(bulb_on.jpg);
+}
+label .four:checked ~ .bulb3{
+  background: url(bulb_on.jpg);
+}
+label .five:checked ~ .bulb4{
+  background: url(bulb_on.jpg);
+}
